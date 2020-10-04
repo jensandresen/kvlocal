@@ -11,6 +11,7 @@ run:
 	docker run -d \
 		-p 15000:3000 \
 		-v $(HOST_DATA_DIR):/data \
+		-e KVLOCAL_DATA_DIR="/data" \
 		--restart unless-stopped \
 		--name $(NAME) \
 		$(NAME)
